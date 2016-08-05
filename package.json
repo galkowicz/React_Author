@@ -1,0 +1,29 @@
+{
+  "name": "orian_react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-react": "^6.11.1"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.11.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-install": "^0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galkowicz/React_Author.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galkowicz/React_Author/issues"
+  },
+  "homepage": "https://github.com/galkowicz/React_Author#readme"
+}
