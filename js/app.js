@@ -28,7 +28,7 @@
             return (<div>
                     <div className="row">
                         <div className="col-md-4">
-                            <img src={this.state.author.imageUrl} className="authorimage col-md-3" />
+                            <img src={this.state.author.imageUrl} className="authorimage col-md-12" />
                         </div>
                         <div className="col-md-7">
                             {this.state.books.map(function (b) {
@@ -45,7 +45,7 @@
                         </div>) : <span/>
                     }
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-12" style={{"margin-left": "1.5rem", "margin-top":"1rem"}}>
                             <input onClick={this.handleAddGame} id="addGameButton" type="button" value="Add Game" className="btn " />
                         </div>
                     </div>
@@ -59,11 +59,16 @@
         propTypes: {
           title: React.PropTypes.string.isRequired
         },
+        divStyle : {
+            color: 'white',
+            display: 'block',
+            'margin-bottom': '1rem'
+        },
         handleClick: function() {
           this.props.onBookSelected(this.props.title);
         },
         render: function() {
-            return <div onClick={this.props.handleClick} className="answer">
+            return <div  style={this.divStyle} onClick={this.handleClick} className="btn btn-success">
                 <h4>{this.props.title}</h4>
             </div>;
         }

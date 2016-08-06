@@ -36,7 +36,7 @@
                     React.createElement(
                         'div',
                         { className: 'col-md-4' },
-                        React.createElement('img', { src: this.state.author.imageUrl, className: 'authorimage col-md-3' })
+                        React.createElement('img', { src: this.state.author.imageUrl, className: 'authorimage col-md-12' })
                     ),
                     React.createElement(
                         'div',
@@ -61,7 +61,7 @@
                     { className: 'row' },
                     React.createElement(
                         'div',
-                        { className: 'col-md-12' },
+                        { className: 'col-md-12', style: { "margin-left": "1.5rem", "margin-top": "1rem" } },
                         React.createElement('input', { onClick: this.handleAddGame, id: 'addGameButton', type: 'button', value: 'Add Game', className: 'btn ' })
                     )
                 )
@@ -76,13 +76,18 @@
         propTypes: {
             title: React.PropTypes.string.isRequired
         },
+        divStyle: {
+            color: 'white',
+            display: 'block',
+            'margin-bottom': '1rem'
+        },
         handleClick: function () {
             this.props.onBookSelected(this.props.title);
         },
         render: function () {
             return React.createElement(
                 'div',
-                { onClick: this.props.handleClick, className: 'answer' },
+                { style: this.divStyle, onClick: this.handleClick, className: 'btn btn-success' },
                 React.createElement(
                     'h4',
                     null,
